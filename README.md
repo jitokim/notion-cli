@@ -2,14 +2,14 @@
 
 A command-line interface for the Notion API — interact with pages, databases, blocks, and more directly from your terminal.
 
-[![npm](https://img.shields.io/npm/v/notion-cli-tool)](https://www.npmjs.com/package/notion-cli-tool)
+[![npm](https://img.shields.io/npm/v/@jitokim/notion-cli)](https://www.npmjs.com/package/@jitokim/notion-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node.js >= 20](https://img.shields.io/badge/node-%3E%3D20-brightgreen)](https://nodejs.org)
 
 ## Installation
 
 ```bash
-npm install -g notion-cli-tool
+npm install -g @jitokim/notion-cli
 ```
 
 Requires Node.js 20 or later.
