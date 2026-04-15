@@ -1,0 +1,47 @@
+{
+  "name": "@jitokim/notion-cli",
+  "version": "0.1.0",
+  "description": "Notion API CLI tool built on the official SDK",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "notion-cli": "dist/cli.js"
+  },
+  "main": "dist/cli.js",
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "pnpm@9.15.9",
+  "scripts": {
+    "build": "tsup",
+    "postbuild": "chmod +x dist/cli.js",
+    "dev": "tsup --watch",
+    "lint": "eslint src/ --ext .ts",
+    "type-check": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run build && pnpm run test"
+  },
+  "dependencies": {
+    "@notionhq/client": "^5.18.0",
+    "commander": "^13.1.0",
+    "chalk": "^5.4.1",
+    "cli-table3": "^0.6.5",
+    "pino": "^9.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.2",
+    "tsup": "^8.4.0",
+    "typescript": "^5.9.0",
+    "vitest": "^3.1.1",
+    "eslint": "^9.24.0",
+    "@eslint/js": "^9.24.0",
+    "typescript-eslint": "^8.30.1",
+    "@vitest/coverage-v8": "^3.1.1"
+  }
+}
